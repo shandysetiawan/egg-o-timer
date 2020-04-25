@@ -76,9 +76,9 @@ function updateValue() {
 start.addEventListener("click", function (e) {
   e.preventDefault();
   if (summary == 0) {
-    customSecondDisplay.textContent = 00;
-    customMinuteisplay.textContent = 00;
-    customHourDisplay.textContent = 00;
+    customSecondDisplay.value.textContent = 00;
+    customMinuteisplay.value.textContent = 00;
+    customHourDisplay.value.textContent = 00;
   }
   var timeStart = summary;
   var displayHour = customHourDisplay.value;
