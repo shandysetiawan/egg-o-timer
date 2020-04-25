@@ -3,23 +3,18 @@ body {
 }
 
 p {
-  font-size: 300%;
+  font-size: 50px;
   text-align: center;
+  margin: 0%;
 }
 
 h1 {
-  margin-left: 3%;
-}
-
-div.background {
-  border: 2px solid black;
+  font-size: 45px;
 }
 
 .container {
   margin-left: 2%;
   margin-right: 2%;
-  margin-top: -3.5%;
-  position: absolute;
   background-color: f1d6ab;
 }
 
@@ -80,7 +75,7 @@ div.background {
   margin: 1%;
   padding: 0.7%;
   font-family: "Dancing Script", cursive;
-  font-size: 100%;
+  font-size: 20px;
   border-radius: 10%;
 }
 
@@ -95,26 +90,57 @@ div.background {
 }
 
 .custom-timer {
-  font-size: 500%;
   display: inline-flex;
   margin-left: 30%;
   padding-bottom: 8%;
 }
 
+input {
+  font-size: 500%;
+}
+
 .custom {
-  font-size: 100%;
   font-family: "Quantico", sans-serif;
+  width: 130px;
 }
 
 #dot {
   font-family: "Quantico", sans-serif;
+  font-size: 500%;
 }
 .start-reset {
   width: 6%;
   margin: 0.5%;
   padding: 0.3%;
-  font-family: "Amatic SC", cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 140%;
   border-radius: 10%;
   background-color: fcf8f3;
+}
+
+button {
+  padding: 1% 10px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  background-color: gray;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+footer {
+  background-color: yellow;
 }

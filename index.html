@@ -66,18 +66,49 @@
         <form>
           <h1>Customize your own Timer!</h1>
           <div class="custom-timer">
-            <input type="number" min="0" max="99" class="custom" id="hour" />
+            <input
+              type="number"
+              min="0"
+              max="99"
+              size="2"
+              class="custom"
+              id="hour"
+            />
             <div id="dot">:</div>
-            <input type="number" min="0" max="99" class="custom" id="minute" />
+            <input
+              type="number"
+              min="0"
+              max="99"
+              size="2"
+              class="custom"
+              id="minute"
+            />
             <div id="dot">:</div>
-            <input type="number" min="0" max="99" class="custom" id="second" />
+            <input
+              type="number"
+              min="0"
+              max="99"
+              size="2"
+              class="custom"
+              id="second"
+            />
           </div>
           <button class="start-reset" id="start" type="submit">Start</button>
-          <button class="start-reset" id="pause">Pause</button>
+          <button class="start-reset" type="submit" onClick="refreshPage()">
+            Reload
+          </button>
         </form>
       </div>
     </div>
 
     <script src="egg-o-timer.js"></script>
   </body>
+  <footer>
+    <div id="footer">
+        <div id="footer_content">
+            <img src="">
+            <p> &copy; Shandy Setiawan 2020</p>
+        </div></div>
+    </div>
+  </footer>
 </html>

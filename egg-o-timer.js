@@ -1,22 +1,23 @@
-var minuteSoftDisplay = document.getElementById('countdown-minute-soft');
-var secondSoftDisplay = document.getElementById('countdown-second-soft');
-var startSoft = document.getElementById('soft-button');
+var minuteSoftDisplay = document.getElementById("countdown-minute-soft");
+var secondSoftDisplay = document.getElementById("countdown-second-soft");
+var startSoft = document.getElementById("soft-button");
 
-var minuteMediumDisplay = document.getElementById('countdown-minute-medium');
-var secondMediumDisplay = document.getElementById('countdown-second-medium');
-var startMedium = document.getElementById('medium-button');
+var minuteMediumDisplay = document.getElementById("countdown-minute-medium");
+var secondMediumDisplay = document.getElementById("countdown-second-medium");
+var startMedium = document.getElementById("medium-button");
 
-var minuteHardDisplay = document.getElementById('countdown-minute-hard');
-var secondHardDisplay = document.getElementById('countdown-second-hard');
-var startHard = document.getElementById('hard-button');
+var minuteHardDisplay = document.getElementById("countdown-minute-hard");
+var secondHardDisplay = document.getElementById("countdown-second-hard");
+var startHard = document.getElementById("hard-button");
 
-var customHourDisplay = document.getElementById('hour');
-var customMinuteDisplay = document.getElementById('minute');
-var customSecondDisplay = document.getElementById('second');
-var startCustom = document.getElementById('start');
+var customHourDisplay = document.getElementById("hour");
+var customMinuteDisplay = document.getElementById("minute");
+var customSecondDisplay = document.getElementById("second");
+var startCustom = document.getElementById("start");
+var buttonAll = document.getElementsByTagName("button");
 
 function addZero(n) {
-  return n < 10 ? '0' + n : n;
+  return n < 10 ? "0" + n : n;
 }
 
 function startTimer(secondDisplay, minuteDisplay, timeStart) {
@@ -25,7 +26,7 @@ function startTimer(secondDisplay, minuteDisplay, timeStart) {
   var timerDuration = setInterval(function () {
     timeLeftSecond--;
     displaySecond--;
-    minuteDisplay.textContent = addZero(timeStart-1);
+    minuteDisplay.textContent = addZero(timeStart - 1);
     secondDisplay.textContent = addZero(displaySecond);
     if (displaySecond <= 0) {
       displaySecond = 60;
@@ -36,37 +37,34 @@ function startTimer(secondDisplay, minuteDisplay, timeStart) {
       clearInterval(timerDuration);
     }
     if (timeLeftSecond <= 0 && timeStart == 0) {
-      minuteDisplay.style.color = 'red';
-      secondDisplay.style.color = 'red';
-      var audio = new Audio('./gallery/alarm.mp3');
+      minuteDisplay.style.color = "red";
+      secondDisplay.style.color = "red";
+      var audio = new Audio("./gallery/alarm.mp3");
       audio.play();
     }
   }, 1000);
 }
 
-startSoft.addEventListener('click', function () {
+startSoft.addEventListener("click", function () {
   startTimer(secondSoftDisplay, minuteSoftDisplay, 5);
   startSoft.disabled = true;
 });
 
-startMedium.addEventListener('click', function () {
+startMedium.addEventListener("click", function () {
   startTimer(secondMediumDisplay, minuteMediumDisplay, 7);
   startMedium.disabled = true;
 });
 
-startHard.addEventListener('click', function () {
+startHard.addEventListener("click", function () {
   startTimer(secondHardDisplay, minuteHardDisplay, 12);
   startHard.disabled = true;
 });
 
-const input = document.querySelector('input');
-const log = document.getElementById('log');
-
 var summary = 0;
 
-customHourDisplay.addEventListener('change', updateValue);
-customMinuteDisplay.addEventListener('change', updateValue);
-customSecondDisplay.addEventListener('change', updateValue);
+customHourDisplay.addEventListener("change", updateValue);
+customMinuteDisplay.addEventListener("change", updateValue);
+customSecondDisplay.addEventListener("change", updateValue);
 
 function updateValue() {
   summary =
@@ -75,8 +73,13 @@ function updateValue() {
     Number(customSecondDisplay.value);
 }
 
-start.addEventListener('click', function (e) {
+start.addEventListener("click", function (e) {
   e.preventDefault();
+  if (summary == 0) {
+    customSecondDisplay.textContent = 00;
+    customMinuteisplay.textContent = 00;
+    customHourDisplay.textContent = 00;
+  }
   var timeStart = summary;
   var displayHour = customHourDisplay.value;
   var displayMinute = customMinuteDisplay.value;
@@ -101,11 +104,16 @@ start.addEventListener('click', function (e) {
       clearInterval(timerDuration);
     }
     if (customSecondDisplay.value <= 0 && summary == 0) {
-      customSecondDisplay.style.color = 'red';
-      customMinuteDisplay.style.color = 'red';
-      customHourDisplay.style.color = 'red';
-      var audio = new Audio('./gallery/alarm.mp3');
+      customSecondDisplay.style.color = "red";
+      customMinuteDisplay.style.color = "red";
+      customHourDisplay.style.color = "red";
+      var audio = new Audio("./gallery/alarm.mp3");
       audio.play();
     }
   }, 1000);
+  start.disabled = true;
 });
+
+function refreshPage() {
+  window.location.reload();
+}
