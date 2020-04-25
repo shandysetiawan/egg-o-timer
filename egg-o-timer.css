@@ -1,0 +1,120 @@
+body {
+  font-family: "Amatic SC", cursive;
+}
+
+p {
+  font-size: 300%;
+  text-align: center;
+}
+
+h1 {
+  margin-left: 3%;
+}
+
+div.background {
+  border: 2px solid black;
+}
+
+.container {
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-top: -3.5%;
+  position: absolute;
+  background-color: f1d6ab;
+}
+
+.menubar {
+  background-color: yellow;
+}
+
+.display-timer {
+  display: flex;
+  font-family: "Quantico", sans-serif;
+  font-size: 300%;
+  margin-top: 10%;
+  justify-content: center;
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+#image-soft {
+  width: 55%;
+  margin-left: 20%;
+  margin-top: 10%;
+}
+
+#image-medium {
+  width: 70%;
+  margin-left: 17%;
+  margin-top: 25%;
+}
+
+#image-hard {
+  width: 55%;
+  margin-left: 22%;
+  margin-top: 15%;
+}
+
+.square {
+  width: 20%;
+  background-color: white;
+  margin: 1%;
+  border-radius: 15%;
+}
+
+#medium-square {
+  background-color: #706d67;
+}
+
+.button-choice {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  width: 12%;
+  background-color: fcf8f3;
+  margin: 1%;
+  padding: 0.7%;
+  font-family: "Dancing Script", cursive;
+  font-size: 100%;
+  border-radius: 10%;
+}
+
+.button-reset {
+  width: 6%;
+  background-color: fcf8f3;
+  margin: 0.5%;
+  padding: 0.3%;
+  font-family: "Amatic SC", cursive;
+  font-size: 140%;
+  border-radius: 10%;
+}
+
+.custom-timer {
+  font-size: 500%;
+  display: inline-flex;
+  margin-left: 30%;
+  padding-bottom: 8%;
+}
+
+.custom {
+  font-size: 100%;
+  font-family: "Quantico", sans-serif;
+}
+
+#dot {
+  font-family: "Quantico", sans-serif;
+}
+.start-reset {
+  width: 6%;
+  margin: 0.5%;
+  padding: 0.3%;
+  font-family: "Amatic SC", cursive;
+  font-size: 140%;
+  border-radius: 10%;
+  background-color: fcf8f3;
+}

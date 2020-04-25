@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="./egg-o-timer.css" />
+    <link rel="shortcut icon" type="image/png" href="./gallery/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Egg o Timer</title>
+  </head>
+  <body>
+    <div class="menubar">
+      <p>Welcome to Egg o Timer! Time to Cook Perfect EGG!</p>
+    </div>
+    <div class="container">
+      <div class="content">
+        <h1>Please CLick the Egg Button Menu to Start the Timer :)</h1>
+        <div class="card-wrapper">
+          <div class="square">
+            <img
+              id="image-soft"
+              src="./gallery/soft_egg.png"
+              alt="Soft-Cooked"
+            />
+            <div class="display-timer">
+              <span id="countdown-minute-soft">05</span> :
+              <span id="countdown-second-soft">00</span>
+            </div>
+          </div>
+          <div class="square" id="medium-square">
+            <img
+              id="image-medium"
+              src="./gallery/medium_egg.png"
+              alt="Medium-Cooked"
+            />
+            <div class="display-timer">
+              <span id="countdown-minute-medium">07</span> :
+              <span id="countdown-second-medium">00</span>
+            </div>
+          </div>
+          <div class="square">
+            <img
+              id="image-hard"
+              src="./gallery/hard_egg.png"
+              alt="Hard-Cooked"
+            />
+            <div class="timer-wrapper"></div>
+            <div class="display-timer">
+              <span id="countdown-minute-hard">12 </span>:<span
+                id="countdown-second-hard"
+                >00</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="button-choice">
+          <button class="button" id="soft-button">Soft Boiled Egg</button>
+          <button class="button" id="medium-button">Medium Boiled Egg</button>
+          <button class="button" id="hard-button">Hard Boiled Egg</button>
+        </div>
+
+        <form>
+          <h1>Customize your own Timer!</h1>
+          <div class="custom-timer">
+            <input type="number" min="0" max="99" class="custom" id="hour" />
+            <div id="dot">:</div>
+            <input type="number" min="0" max="99" class="custom" id="minute" />
+            <div id="dot">:</div>
+            <input type="number" min="0" max="99" class="custom" id="second" />
+          </div>
+          <button class="start-reset" id="start" type="submit">Start</button>
+          <button class="start-reset" id="pause">Pause</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="egg-o-timer.js"></script>
+  </body>
+</html>
